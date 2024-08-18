@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-backend 
+  namespace: node-backend
+
+data:
+  MONGODB_URI: ""
+  SESSION_SECRET: ""
+  PORT: "3000"
+  SMTP_HOST: "smtp-relay.brevo.com"
+  SMTP_PORT: "587"
+  SMTP_USER: ""
+  SMTP_PASS: ""
+  CLIENT_URL: "http://localhost:5000"
+

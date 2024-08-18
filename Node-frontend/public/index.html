@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Registration/Login Form -->
+        <div id="registrationSection">
+            <h1 id="form-title">Register</h1>
+            <form id="userForm">
+                <div id="username-field">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="submit-button">Register</button>
+            </form>
+            <button id="toggleForm">Switch to Login</button>
+            <p id="message"></p>
+            <p id="forgotPasscodeContainer" style="display: none;">
+                <a href="#" id="forgotPasscodeLink">Forgot Passcode?</a>
+            </p>
+        </div>
+
+        <!-- Forgot Passcode Form -->
+        <div id="forgotPasscodeSection" style="display: none;">
+            <h1>Forgot Passcode</h1>
+            <form id="forgotPasscodeForm">
+                <label for="forgotEmail">Email:</label>
+                <input type="email" id="forgotEmail" name="email" required>
+
+                <button type="submit">Send Reset Link</button>
+            </form>
+            <p id="message"></p>
+            <p><a href="#" id="backToLoginLink">Back to Login</a></p>
+        </div>
+
+        <!-- Reset Passcode Form -->
+        <div id="resetPasscodeSection" style="display: none;">
+            <h1>Reset Passcode</h1>
+            <form id="resetPasscodeForm">
+                <label for="resetToken">Token:</label>
+                <input type="text" id="resetToken" name="token" required>
+
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+
+                <button type="submit">Reset Password</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

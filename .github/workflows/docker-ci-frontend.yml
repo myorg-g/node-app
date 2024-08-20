@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: Node-frontend/
-          file: Dockerfile
+          file:  Node-frontend/Dockerfile
           push: true
           tags: gudditi/node-frontend:${{ github.run_id }}
 

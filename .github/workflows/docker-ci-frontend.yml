@@ -22,7 +22,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: Node-frontend/
+          # context: Node-frontend/
           file:  Node-frontend/Dockerfile
           push: true
           tags: gudditi/node-frontend:${{ github.run_id }}

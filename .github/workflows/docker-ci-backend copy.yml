@@ -24,6 +24,8 @@ jobs:
         run: |
           docker build -t gudditi/node-backend:${{ github.run_id }} -f Node-backend/Dockerfile .
           docker build -t gudditi/node-frontend:${{ github.run_id }} -f Node-frontend/Dockerfile .
+          docker push gudditi/node-frontend:${{ github.run_id }}
+          docker push gudditi/node-backend:${{ github.run_id }}
 
 
 
